@@ -1,7 +1,5 @@
 // Time complexity: O(n*log(n))
 function quickSort(array) {
-  console.log(array)
-
   if (array.length < 2) {
     return array
   }
