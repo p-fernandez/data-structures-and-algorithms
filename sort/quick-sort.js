@@ -1,5 +1,10 @@
 // Time complexity: O(n*log(n))
+
+let count = 0
+
 function quickSort(array) {
+  count++
+
   if (array.length < 2) {
     return array
   }
@@ -13,6 +18,8 @@ function quickSort(array) {
     const item = array[i]
     item < pivot ? left.push(item) : right.push(item)
   }
+  console.log([...left, pivot, ...right]);
+  console.log(count);
 
   return [...quickSort(left), pivot, ...quickSort(right)]
 }
